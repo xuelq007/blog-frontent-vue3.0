@@ -9,13 +9,14 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 
-before_script:
-  - apt-get update -qq && apt-get install -y -qq sshpass
 after_success:
 - export SSHPASS=$DEPLOY_PASS
 - sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@101.132.179.88 "sh ./build.sh"
 addons:
   ssh_known_hosts: 101.132.179.88
+  apt:
+  packages:
+  - sshpass
 branches:
   only:
   - master
