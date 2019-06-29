@@ -13,7 +13,7 @@ after_success:
   - ssh root@101.132.179.88 "./build.sh"
 
 addons:
-  ssh_known_hosts: "xuelq007.com"
+  ssh_known_hosts: '101.132.179.88'
 
 branches:
   only:
