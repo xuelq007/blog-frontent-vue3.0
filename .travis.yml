@@ -8,13 +8,14 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_92c453e01dfa_key -iv $encrypted_92c453e01dfa_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-
 after_success:
-  - sshpass -e ssh -o stricthostkeychecking=no root@101.132.179.88 "sh ./build.sh"
-
+- sshpass -e ssh -o stricthostkeychecking=no root@101.132.179.88 "sh ./build.sh"
 addons:
-  ssh_known_hosts: '101.132.179.88'
-
+  ssh_known_hosts: 101.132.179.88
 branches:
   only:
   - master
+env:
+  global:
+  - secure: F4l8LTxaS4bSrgmprHMds+ckZg4QwSsTMTpR5r/wqy6QniaWqVvOH21cIy4GQ4m5ppk7hyt/zIDWbfSeXgcgKs+W2Mx+FfkuA6KmkCibmB55+IGzXaaL7P2WhYI+QlNnmahwpnLqPFsOk3EFkTS0oem69bYLkKQHU7MYa4iZPSnN64vUOhgmP/1906m6EeO/3/HdYcR28MbFhTcEggtwPconWfKoIrgl7T1uTl1csaLEgB/mBfudxRaJExuMqW6xYOydFKKKtkEf5UPaR91T37gDqsipUvOgu08s7j90cIZRUsFtwGUDnAKwEXrjpnPJbnhlibeX5j/4OkR9lTL6vpn5+Wajn3k9NNwktnZeEvpOfIAmuYqYZ5pbF2AUpKkfkxS9/cuf4paV12fV5vx4ZuCJR25kM4tRwYcfy8C4jRliofCUaYUVjG3RMHlDRCuGCj77524VdalxNeL4yuxHEcAhWj6bUtjkH5bRi68Gcz8ZCWCNfCfN0V2JBhaaZPbmlD0yE9sQhHRyk950rfFjf6QMknK+B5jd6Jd+uX0bSpXz9DYnLOM75PF1HB9WEQQI9tyzms6sKWlVxgjX6ZFfJinaV0Xo9Gk8gui4bbO2YNsn3qckh3q+0gnJgzcsZOOaHBNncZT+I2nXloOmd5A5j9acdCYbWzsQLUA2gNuCt4Q=
+  - secure: PC5gCSvHNqNTQbceSCfKXuoP9DdWSpykdWVQnKX/44TF/SP5DDSRyEK6b8NEduudk/CCFUTTXToQ38a5sCd/9sT57RwRzUaaByyKgCl9EdEnku6qbdQziT4FRvm+xuOVmuGyIOuN+5sRcBLGkJvUaFasbHexrD7gG7liZsAVwLSDI/7UK+voKA/Jp0bLXO8Ck8bYZVcM+TCz7sUkpGoCga+AwV0mLf1eGS/fOIDRGS8CtqyEpBcC5wlodlI3S5Eta3POxBVme+ZrMhKubCz8Rhz+Cp8N6t+A2C5NXSCTTNoQU6EhNypGuB87s0KkXq8v5nmVlAQ+gKk3QHhtxNlWXqVgaCWRTaHGZkX/bklFg/9OCc/YZXTtyTgdLmhnBFS+gq4pPVsGokdwBwn78b3dH7v+39YG2NMph3w436iGUAuzVfCrTwSByGPOOvYvCuLZxmyDys8kQ5DffC4MQEL20hFMS4c6n+CYkHxT0LDmOHZI3QYWLyiMsRcK13DmVfhn6jgEjsseoj97+XBc1u4FoeqR8J3wHQk55OtDncEnjjlLf5Ej6wwKoqGkmYMIAbmzbhhGUotPdN+4giNV5TNvKgr4M2Uj6Ixkd/0EgGv9CsbFbGbgQcLPl0UJzi7qP6Dx09wIDEa0axl6W0wenFDumYTD6CNJyNPnzSKmioVEPxs=
