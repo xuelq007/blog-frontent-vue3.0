@@ -10,4 +10,4 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 
 addons:
-  ssh_known_hosts: xuelq007.com
+  ssh_known_hosts: "xuelq007.com"
