@@ -10,7 +10,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 
 after_success:
-  - ssh xuelq007@xuelq007.com "./build.sh"
+  - ssh root@101.132.179.88 "./build.sh"
 
 addons:
   ssh_known_hosts: "xuelq007.com"
