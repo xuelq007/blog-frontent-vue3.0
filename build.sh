@@ -4,6 +4,5 @@ echo 'pull from git'
 git pull origin master
 echo 'pull from git done!'
 echo 'start building'
-export PATH=$PATH
-npm run build
+/root/.nvm/versions/node/v8.11.1/bin/node/npm run build
 echo 'travis build done!'
