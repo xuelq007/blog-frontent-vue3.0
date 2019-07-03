@@ -10,6 +10,7 @@ before_install:
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - sudo apt-get install -y sshpass
+- sudo apt-get install -y npm
 
 after_success:
 - export SSHPASS=$DEPLOY_PASS
