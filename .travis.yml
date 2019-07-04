@@ -12,7 +12,7 @@ before_install:
 - sudo apt-get install -y sshpass
 
 before_script:
-  - export PATH=$PATH:/$DEPLOY_USER/.nvm/versions/node/v8.11.1/bin
+  - export PATH=$PATH:/root/.nvm/versions/node/v8.11.1/bin
 
 script:
  - echo $PATH
@@ -20,7 +20,7 @@ script:
 
 after_success:
 - export SSHPASS=$DEPLOY_PASS
-- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@101.132.179.88 "cd /usr/blog/blog-frontent-vue3.0 && git pull && echo $PATH && npm install && npm run build && echo 'deploy done'"
+- sshpass -e ssh -o stricthostkeychecking=no root@101.132.179.88 "cd /usr/blog/blog-frontent-vue3.0 && git pull && echo $PATH && npm install && npm run build && echo 'deploy done'"
 addons:
   ssh_known_hosts: 101.132.179.88
 branches:
