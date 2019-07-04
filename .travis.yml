@@ -12,6 +12,7 @@ before_install:
 - sudo apt-get install -y sshpass
 
 script:
+ - export PATH = /root/.nvm/versions/node/v8.11.1/bin:$PATH
  - echo $PATH
  - npm run build
 
