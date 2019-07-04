@@ -12,7 +12,7 @@ before_install:
 - sudo apt-get install -y sshpass
 
 before_script:
-  - export PATH=$PATH:/root/.nvm/versions/node/v8.11.1/bin
+  - export PATH=$PATH:/$DEPLOY_USER/.nvm/versions/node/v8.11.1/bin
 
 script:
  - echo $PATH
