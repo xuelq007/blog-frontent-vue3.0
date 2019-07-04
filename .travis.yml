@@ -11,9 +11,15 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - sudo apt-get install -y sshpass
 
+script:
+ - echo 'ENV PATH: '
+ - echo $PATH
+ - echo 'pre build in travis'
+ - npm run build
+
 after_success:
 - export SSHPASS=$DEPLOY_PASS
-- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@101.132.179.88 "bash /usr/blog/blog-frontent-vue3.0/build.sh"
+- sshpass -e ssh -o stricthostkeychecking=no $DEPLOY_USER@101.132.179.88 "cd /usr/blog/blog-frontent-vue3.0 && git pull && npm install && npm run build && echo 'deploy done'"
 addons:
   ssh_known_hosts: 101.132.179.88
 branches:
