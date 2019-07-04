@@ -12,9 +12,7 @@ before_install:
 - sudo apt-get install -y sshpass
 
 script:
- - echo 'ENV PATH: '
  - echo $PATH
- - echo 'pre build in travis'
  - npm run build
 
 after_success:
