@@ -1,4 +1,5 @@
 # blog-frontend-cli3.0
+[![Build Status](https://www.travis-ci.org/xuelq007/blog-frontent-vue3.0.svg?branch=master)](https://www.travis-ci.org/xuelq007/blog-frontent-vue3.0)
 
 ## Project setup
 ```
