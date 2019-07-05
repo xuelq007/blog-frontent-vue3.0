@@ -17,7 +17,7 @@ script:
 
 after_success:
 - export SSHPASS=$DEPLOY_PASS
-- sshpass -e ssh -o stricthostkeychecking=no root@101.132.179.88 "bash ./build.sh"
+- sshpass -e ssh -o stricthostkeychecking=no root@101.132.179.88 "bash /usr/blog/blog-frontent-vue3.0/build.sh"
 addons:
   ssh_known_hosts: 101.132.179.88
 branches:
