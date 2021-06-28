@@ -3,7 +3,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './registerServiceWorker'
+// import './registerServiceWorker'
 import ElementUI from 'element-ui'
 // import register from './pwa/register.js'
 
