@@ -16,15 +16,6 @@ module.exports = {
     }
   },
 
-  // pwa: {
-  //   // configure the workbox plugin
-  //   workboxPluginMode: 'InjectManifest',
-  //   workboxOptions: {
-  //     // swSrc is required in InjectManifest mode.
-  //     swSrc: 'src/pwa/service-worker.js'
-  //   }
-  // },
-
   configureWebpack: config => {
     // vue骨架屏插件配置
     config.plugins.push(
